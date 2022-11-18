@@ -7,27 +7,26 @@ namespace LinkedListProblems
         {
             LinkedList list = new LinkedList();
             Console.WriteLine("Welcome to the LinkedList Operations");
-            bool flag = true;
-            while (flag)
+            Console.WriteLine("Select the operation to perform\n1.Create LinkedList\n2.Add Data In Reverse Order");
+            Console.Write("Enter your choice: ");
+            int choice=Convert.ToInt32(Console.ReadLine());
+            switch (choice)
             {
-                Console.WriteLine("\n_________________________________________________");
-                Console.WriteLine("Select the operation to perform\n1.Create LinkedList\n2.Display\n3.Exit");
-                int choice=Convert.ToInt32(Console.ReadLine());
-                switch(choice)
-                {
-                    case 1:
-                        list.Add(56);
-                        list.Add(30);
-                        list.Add(70);
-                        break;
-                    case 2:
-                        list.Display();
-                        break;
-                    case 3:
-                        flag = false;
-                        break;
-                }
-
+                case 1:
+                    list.Add(56);
+                    list.Add(30);
+                    list.Add(70);
+                    list.Display();
+                    break;
+                case 2:
+                    list.AddInReverseOrder(70);
+                    list.AddInReverseOrder(30);
+                    list.AddInReverseOrder(56);
+                    list.Display();
+                    break;
+                default:
+                    Console.WriteLine("Invalid Input");
+                    break;
             }
         }
     }
