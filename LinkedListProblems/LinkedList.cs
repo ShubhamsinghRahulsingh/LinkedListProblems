@@ -68,6 +68,15 @@ namespace LinkedListProblems
             Console.WriteLine("\nValue is Successfully Inserted in LinkedList\nAfter updation....");
             return this.head;
         }
+        public void RemoveFirstNode()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("LinkedList is empty");
+            }
+            this.head = this.head.next;
+            Console.WriteLine("First element is deleted successfully");
+        }
         public void Display()
         {
             Node temp = this.head;
