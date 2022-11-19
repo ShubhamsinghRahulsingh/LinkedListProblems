@@ -11,7 +11,9 @@ namespace LinkedListProblems
             list.Add(30);
             list.Add(70);
             list.Display();
-            list.DeleteNodeAtParticularPosition(1);
+            int position = list.Search(30);
+            list.InsertAtParticuarPosition(position + 1, 40);
+            list.Display();
         }
     }
 }
